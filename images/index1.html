@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="click-me">Click Me</button>
+    <button id="remove-me">remove Me</button>
+    <script>
+        window.addEventListener("DOMContentLoaded",function(e){
+            console.log("loaded");
+        })
+        let btn=document.getElementById("click-me");
+        btn.addEventListener("click", function(e){
+            console.log("Button Clicked");
+        }
+        )
+        
+        window.addEventListener("resize", function(){
+            console.log("window resized");
+        });
+        window.addEventListener("orientationchange",function(){
+            let screen= window.screen;
+            let angle=screen.orientation.angle;
+            let type=screen.orientation.type;
+            console.log(`angle: ${ angle}, type: ${type}`);
+
+        });
+    </script>
+    
+</body>
+</html>

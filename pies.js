@@ -1,0 +1,1 @@
+window.addEventListener("Domcontentloaded", functiom(e)())
